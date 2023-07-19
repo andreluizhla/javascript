@@ -9,9 +9,11 @@
     <h1>Estudando DOM</h1>
     <p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
     <p>Modelo de Objeto de Documentos</p>
-    <div>Clique Aqui</div>
+    <div id="msg">Clique Aqui</div>
     <script>
         var p1 = window.document.getElementsByTagName('p')[1]
+        var d = document.getElementById('msg')
+        d.style.background = 'blue'
         window.document.write('No 2º parágrafo está escrito: ' + p1.innerText)
     </script>
 </body>
