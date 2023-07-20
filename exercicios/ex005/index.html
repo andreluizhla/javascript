@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evetos DOM</title>
+    <style>
+        div#int {
+            background-color: green;
+            color: white;
+            font: normal 20pt "Arial";
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: 50px auto;
+            border-radius: 100px;
+        }
+        span > button{
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="int">Interaja</div>
+    
+    <script>
+        var a = document.getElementById('int')
+        a.addEventListener('mouseup', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+        a.addEventListener('mousedown', segurou)
+
+        function clicar() {
+            a.style.background = 'red'
+            a.innerText = 'Foi Clicado'
+            a.style.fontSize = '20pt'
+        }
+
+        function entrou() {
+            a.innerText = 'O Mouse Entrou'
+        }
+
+        function saiu() {
+            a.innerText = 'O Mouse Saiu'
+            a.style.background = ''
+            a.style.color = 'white'
+            a.style.fontSize = '20pt'
+        }
+
+        function segurou() {
+            a.style.background = 'purple'
+            a.innerText = 'Está Segurando o Click'
+            a.style.fontSize = '12pt'
+        }
+        </script>
+</body>
+</html>
