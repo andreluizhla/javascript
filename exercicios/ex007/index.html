@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Condições</title>
 </head>
 <body>
+    <h1>Estrangeiro?</h1>
+    <p>POV: Você está no Brasil</p>
+    <p>Digite o seu país que você nasceu: <br></p>
+    <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="calc()">
+    <div id="res">
     
+    </div>
+    <script>
+        function calc() {
+            var nas = document.getElementById('txt').value
+            var res = document.getElementById('res')
+
+            if (nas == 'Brasil'){
+                res.innerHTML = '<p>Você é <strong>Brasileiro</strong>!</p>'
+            } else {
+                res.innerHTML = '<p>Você é <strong>Estrangeiro</strong>!</p>'
+            }
+        }
+    </script>
 </body>
 </html>
