@@ -17,6 +17,11 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+div > img {
+    border-radius: 300px;
 }
 
 footer {
