@@ -17,10 +17,12 @@ function adicionar(){
         item.text = `Adicionado o número ${num}`
         numeros.push(num)
         lista.appendChild(item)
-        res.innerHTML = ''
     } else {
         window.alert(`[ERRO] O número ${num} já foi colocado`)
     }
+    res.innerHTML = ''
+    txtnum.value = ''
+    txtnum.focus()
 }
 
 function verificar() {
