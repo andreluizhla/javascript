@@ -27,16 +27,27 @@ function adicionar(){
 
 function verificar() {
     if (numeros.length == 0){
-        window.alert('[ERRO] Coloque algum número na lista')
+        window.alert('[ERRO] Coloque algum número antes de finalizar')
     } else {
-    numeros.sort(function(a, b) {
-        return a - b;
-    });
-    var exten = numeros.length;
-    var maior = numeros[numeros.length - 1];
+    var total = numeros.length;
+    var maior = numeros[0];
     var menor = numeros[0];
-
-    res.innerHTML = `Ao todo temos ${exten} números cadastrados <br> O maior número foi ${maior} <br> O menor número é o ${menor}`;
+    var soma = 0
+    var media = 0
+    for (let pos in numeros){
+        soma += numeros[pos]
+        if (numeros[pos] > maior) 
+            maior = numeros[pos]
+        if (numeros[pos] < menor)
+            menor = numeros[pos]
     }
+    media = soma / total
     
+    res.innerHTML = ''
+    res.innerHTML += `<p>Ao todo, temos ${total} números cadastrados</p>`;
+    res.innerHTML += `<p>O maior número foi ${maior}</p>`
+    res.innerHTML += `<p>O menor número é o ${menor}</p>`
+    res.innerHTML += `<p>A soma dos números é igual a ${soma}</p>`
+    res.innerHTML += `<p>E a média dos valores é igual a ${media}</p>`
+    }
 }
